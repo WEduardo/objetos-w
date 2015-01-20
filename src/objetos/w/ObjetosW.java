@@ -15,7 +15,7 @@ public class ObjetosW {
     public static void main(String[] args) {
         
        
-Scanner entrada = new Scanner(System.in);
+Scanner tarea = new Scanner(System.in);
 
 float peso;
 float estatura;
@@ -23,9 +23,9 @@ float imc;
 
 
         System.out.println("Deme su estatura en metros:");
-        estatura = entrada.nextFloat();
+        estatura = tarea.nextFloat();
         System.out.print("Deme su peso en kg:");
-        peso = entrada.nextFloat();
+        peso = tarea.nextFloat();
         imc = peso/(estatura * estatura);
         System.out.println("su indice de masa corporal es " + imc);
         
