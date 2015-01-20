@@ -5,19 +5,31 @@
  */
 package objetos.w;
 
-/**
- *
- * @author T-107
- */
+import java.util.Scanner;
+
 public class ObjetosW {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-      
         
-        System.out.println("MI PRIMER PROGRAMA DE JAVA dos");
+       
+Scanner entrada = new Scanner(System.in);
+
+float peso;
+float estatura;
+float imc;
+
+
+        System.out.println("Deme su estatura en metros:");
+        estatura = entrada.nextFloat();
+        System.out.print("Deme su peso en kg:");
+        peso = entrada.nextFloat();
+        imc = peso/(estatura * estatura);
+        System.out.println("su indice de masa corporal es " + imc);
+        
+imc = peso /(estatura * estatura);
     }
     
 }
