@@ -17,7 +17,7 @@ public class ObjetosW {
     public static void main(String[] args) {
       
         
-        System.out.println("MI PRIMER PROGRAMA DE JAVA DOS");
+        System.out.println("MI PRIMER PROGRAMA DE JAVA dos");
     }
     
 }
