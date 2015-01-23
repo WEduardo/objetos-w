@@ -1,0 +1,71 @@
+Tarea 2 
+MAIN:
+
+package tarea2;
+
+
+public class Tarea2 {
+
+    
+    public static void main(String[] args) {
+       
+        Imc usuario;
+        
+        usuario = new Imc();
+        
+ usuario.calculoimc();
+
+ 
+
+        
+    }
+    
+}
+
+
+CLASE IMC
+
+package tarea2;
+
+import java.util.Scanner;
+
+public class Imc {
+    
+    private float peso;
+    private float estatura;
+    private float opeimc;
+
+Scanner dar=new Scanner(System.in);
+    
+    
+public void calculoimc(){
+    
+System.out.println("Ingresa su peso");
+peso=dar.nextFloat();
+
+System.out.println("Ingresa su estatura");
+estatura=dar.nextFloat();
+verifica();
+
+}
+
+public void verifica(){
+    
+    if(peso>=0 && estatura>=0){
+      
+    calculo();
+      
+     }else{
+        
+        System.out.println("Los datos son incorrectos");
+    }
+    
+}
+
+public void calculo(){
+    opeimc=peso/(estatura*estatura);
+    System.out.println("Su peso es " + peso);
+    System.out.println("Su estatura es " + estatura);
+    System.out.println("Por lo tanto su imc es " + opeimc);
+}        
+}
