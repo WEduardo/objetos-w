@@ -123,19 +123,24 @@ return "Usted tiene SOBREPESO GRADO 3 DEBERIA TENER MUCHO CUIDADO";
  * 4.-Poner los atributos negativos es imposible en este problema como le harias para imedir 
  * que en el metodo main en este problema el peso y la estatura sean negativos 
  * R=
-      public void  setPeso(float ps){
-this.peso=ps;
+    
+    public float Peso(){
+System.out.println("Ingresa su peso");
+peso=dar.nextFloat();
 if (peso<0){
-    peso=peso*-1;}
+peso=peso*-1;}
+
+return peso;
 }
-public void setEstatura(float et){
-this.estatura=et;
+  
+
+public float Estatura(){
+System.out.println("Ingresa su estatura");
+estatura=dar.nextFloat();
 if(estatura<0){
 estatura=estatura*-1;}
+return estatura;
 }
-
-
-
 
 
 
