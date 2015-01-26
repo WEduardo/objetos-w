@@ -42,31 +42,35 @@ public float Imccal(){
   return imc;
 }
 
-public void  setPeso(float ps){
+/*public void  setPeso(float ps){
 this.peso=ps;
 if (peso<0){
     peso=peso*-1;}
-}
+}*/
 
 
 public float Peso(){
 System.out.println("Ingresa su peso");
 peso=dar.nextFloat();
+if (peso<0){
+peso=peso*-1;}
 
 return peso;
 }
   
 
-public void setEstatura(float et){
+/*public void setEstatura(float et){
 this.estatura=et;
 if(estatura<0){
 estatura=estatura*-1;}
-}
+}*/
 
 
 public float Estatura(){
 System.out.println("Ingresa su estatura");
 estatura=dar.nextFloat();
+if(estatura<0){
+estatura=estatura*-1;}
 return estatura;
 }
 
@@ -90,6 +94,17 @@ return "Usted tiene SOBREPESO GRADO 2";
 return "Usted tiene SOBREPESO GRADO 3 DEBERIA TENER MUCHO CUIDADO";
 }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*1.-¿Estamos usando los atributos de la claxe Imc en el main?
