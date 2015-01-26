@@ -1,0 +1,127 @@
+MAIN CLASS
+
+package indicemasacorporal;
+
+
+public class Indicemasacorporal {
+
+    public static void main(String[] args) {
+        
+      Imc Usuario;
+      Usuario =new Imc();  
+        
+     // Usuario.setPeso(125);
+     // Usuario.setEstatura(1.25f);
+      
+ System.out.println("Su estatura es: " +Usuario.Estatura() + " metros");
+ System.out.println("Su peso es :" + Usuario.Peso() + " Kg");
+ System.out.println("Su Indice de masa corporal es de: " + Usuario.Imccal());
+ System.out.println("Verificaremos su salud");
+ System.out.println("Su salud es: " + Usuario.Salud());
+}    
+}
+///////////////////////////////////////////////////
+CLASE IMC
+
+
+package indicemasacorporal;
+
+import java.util.Scanner;
+
+public class Imc {
+    
+private float peso;
+private float estatura;
+
+Scanner dar=new Scanner(System.in);
+
+public float Imccal(){
+ 
+  float imc=peso /(estatura*estatura); 
+ 
+  return imc;
+}
+
+public void  setPeso(float ps){
+this.peso=ps;
+if (peso<0){
+    peso=peso*-1;}
+}
+
+
+public float Peso(){
+System.out.println("Ingresa su peso");
+peso=dar.nextFloat();
+
+return peso;
+}
+  
+
+public void setEstatura(float et){
+this.estatura=et;
+if(estatura<0){
+estatura=estatura*-1;}
+}
+
+
+public float Estatura(){
+System.out.println("Ingresa su estatura");
+estatura=dar.nextFloat();
+return estatura;
+}
+
+
+public String Salud(){
+    
+float checar=Imccal();
+if(checar<16){
+return "Usted tiene una DESNUTRICIÓN GRADO 3";    
+}else if(checar > 16 && checar<17){
+return "Usted tiene una DESNUTRICIÓN GRADO 2"; 
+}else if(checar > 17 && checar<18.5){
+return "Usted tiene una DESNUTRICIÓN GRADO 1"; 
+}else if(checar > 18.5 && checar<25){
+return "Usted esta bien de salud FELICIDADES";
+}else if(checar > 25 && checar<30){
+return "Usted tiene SOBREPESO GRADO 1";
+}else if(checar>40 && checar < 41){
+return "Usted tiene SOBREPESO GRADO 2";
+}else 
+return "Usted tiene SOBREPESO GRADO 3 DEBERIA TENER MUCHO CUIDADO";
+}
+}
+
+
+/*1.-¿Estamos usando los atributos de la claxe Imc en el main?
+ * R=No por que le asignamos valores en la operación directamente.
+ * 
+ * 2.-¿Que modificarias en la clase imc para que el metodo calcula ocupara los atributos?
+ * R=Pediria los valores a partir de un nuevo objeto, el cual en un metodo los recaudaria.
+ * 
+ * 3.-¿En la clase main tal y como esta trata de imprimir el valor de los atributos 
+ * y modificar su valor?
+ * R=
+      System.out.println("Su estatura es: " +Usuario.Estatura() + " metros");
+      System.out.println("Su peso es :" + Usuario.Peso() + " Kg");
+       
+ * 
+ * 4.-Poner los atributos negativos es imposible en este problema como le harias para imedir 
+ * que en el metodo main en este problema el peso y la estatura sean negativos 
+ * R=
+      public void  setPeso(float ps){
+this.peso=ps;
+if (peso<0){
+    peso=peso*-1;}
+}
+public void setEstatura(float et){
+this.estatura=et;
+if(estatura<0){
+estatura=estatura*-1;}
+}
+
+
+
+
+
+
+
