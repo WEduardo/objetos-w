@@ -49,8 +49,8 @@ public class Cuadrado {
                }
     }
 public void Calular_Area(){
-float areacuadrado=largo*ancho;
-System.out.println("El area del cuadrado es : " + areacuadrado);
+float area=largo*ancho;
+System.out.println("El area de la figura es : " + area);
 System.out.println("La figura es : " + figura);
  
 } 
