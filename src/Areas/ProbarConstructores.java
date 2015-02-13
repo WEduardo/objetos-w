@@ -13,7 +13,7 @@ public class ProbarConstructores {
         int i=2;
         long l=2;
         
-        b=s;
+       // b=s;
         s=b;
     i=s;
     b=(byte)l;
