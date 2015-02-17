@@ -28,7 +28,7 @@ public Regla3(int numeroS){
     /*CUARTO CONSTRUCTOR */ 
 }
 
-public Regla3(int edad, int peso){ 
+//public Regla3(int edad, int peso){ 
     /*QUINTO CONSTRUCTOR Y MALO */ 
         
         /*El error esta en la asignacion de los tipos de argumentos, ya que el segundo constructor tiene
@@ -44,5 +44,5 @@ A LA CREACION DE NUEVOS OBJETOS, YA QUE LO HACE MAS FLEXIBLE.
 
 
 
-}
+//}
 
