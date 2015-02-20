@@ -39,7 +39,7 @@ public class ProbarConstructores {
     Cuadrado c=new Cuadrado(i2);
             */
     
-    Cuadrado c=new Cuadrado((float)dedos);
+   // Cuadrado c=new Cuadrado((float)dedos);
   
     }
             

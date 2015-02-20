@@ -108,7 +108,8 @@ public class ProyectoAreas extends javax.swing.JFrame {
         c.setLado(Float.parseFloat(textoLado.getText()));
         etiquetaResultado.setText("El area es :" + c.calcularArea());
         }
-        catch(Throwable e){
+        //catch(Throwable e){ asi tambien sew puede pork es la madre de las excepciones
+        catch(Exception e){
             jLabel1.setText(e.getMessage());
         }
         //getMessage hace que busque la excepcion 
