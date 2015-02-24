@@ -106,7 +106,7 @@ public class ProyectoAreas extends javax.swing.JFrame {
         try {
         Cuadrado c=new Cuadrado();
         c.setLado(Float.parseFloat(textoLado.getText()));
-        etiquetaResultado.setText("El area es :" + c.calcularArea());
+        etiquetaResultado.setText("El area es :" + c.CalcularArea());
         }
         //catch(Throwable e){ asi tambien sew puede pork es la madre de las excepciones
         catch(Exception e){
