@@ -1,6 +1,6 @@
 
 package Areas;
-public class Cuadrado {
+public class Cuadrado implements Superficies{
     private float lado;
 /**
  * Este constructor tiene un argumento de tipo flotante
@@ -34,7 +34,8 @@ public class Cuadrado {
     }
     
     
-    float CalcularArea(){
+    public float CalcularArea(){
+        System.out.print("El are del cuadrado es: ");
         float area=lado*lado;
         return area;
     }

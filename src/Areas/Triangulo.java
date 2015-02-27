@@ -17,6 +17,7 @@ public class Triangulo implements Superficies {
     
     
     public float CalcularArea(){
+        System.out.print("El are del triangulo es: ");
         return (base*altura)/2;
     }
 
