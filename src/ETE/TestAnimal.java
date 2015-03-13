@@ -16,8 +16,8 @@ public class TestAnimal {
      */
     public static void main(String[] args) {
     
-        for(Animal a:GenerarAnimales.generarAnimal()){
-            System.out.println(a.getNombre() + " " + a.getEdad());
+        for(Anima b:GenerarAnimales.generarAnima()){
+            System.out.println(b.getNombre() + " " + b.getEdad());
         }
         
     }

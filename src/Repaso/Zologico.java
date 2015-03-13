@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ETE;
+package Repaso;
 
 /**
  *
- * @author T-107
+ * @author usuario
  */
-public class Zoologico {
+public class Zologico {
     
+    private Animales animal;
     
-    private Anima animal;
-    
-    public Zoologico(Anima animal){
+    public Zologico(Animales animal){
         this.animal=animal;
     }
+    
 }

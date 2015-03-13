@@ -38,7 +38,7 @@ public class ProbarThreads {
         );
         Relojito treloj3=new Relojito();
         
-       //DAR NOMBRE A THREAD t1.setName("Lalo");
+       t1.setName("Lalo");
         
         t1.start();
         t11.start();

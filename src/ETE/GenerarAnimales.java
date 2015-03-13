@@ -13,11 +13,11 @@ import java.util.*;
 public class GenerarAnimales {
     
     
-    public static ArrayList<Animal> generarAnimal(){
-        ArrayList<Animal> animales= new ArrayList<Animal>();
+    public static ArrayList<Anima> generarAnima(){
+        ArrayList<Anima> animales= new ArrayList<Anima>();
         
-        Animal a1=new Animal("leon",2);
-        Animal a2=new Animal("delfin",6);
+        Anima a1=new Anima("leon",2);
+        Anima a2=new Anima("delfin",6);
                        
                        
                       

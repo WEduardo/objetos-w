@@ -3,18 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ETE;
+package Repaso;
 
 /**
  *
- * @author T-107
+ * @author usuario
  */
-public class Zoologico {
+public class EdadNoNegativasException extends Exception {
     
-    
-    private Anima animal;
-    
-    public Zoologico(Anima animal){
-        this.animal=animal;
+    public EdadNoNegativasException(){
+        super("No se acceptan edades negativas");
     }
+    
 }

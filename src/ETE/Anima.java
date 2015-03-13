@@ -9,9 +9,9 @@ package ETE;
  *
  * @author T-107
  */
-public class Animal {
-    public String nombre;
-    public int edad;
+public class Anima{
+    private String nombre;
+    private int edad;
 
     public String getNombre() {
         return nombre;
@@ -29,7 +29,10 @@ public class Animal {
         this.edad = edad;
     }
 
-    public Animal(String nombre, int edad) {
+    public Anima() {
+    }
+
+    public Anima(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
     }
