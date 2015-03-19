@@ -18,6 +18,39 @@ public class Reloj extends javax.swing.JFrame {
      */
     public Reloj() {
         initComponents();
+        
+             
+        Thread x=new Thread(new Runnable(){
+        
+        public void run() {
+            
+            while (true){
+                
+             try{
+                 
+    Calendar cal=Calendar.getInstance();
+    int hora=cal.get(Calendar.HOUR_OF_DAY);
+    int minuto=cal.get(Calendar.MINUTE);
+    int segundo=cal.get(Calendar.SECOND);
+    
+     jLabel2.setText(hora+": "+minuto+" :" + segundo);
+       
+     Thread.sleep(1000);
+    }catch(InterruptedException e){}
+    
+    }
+    }
+    }  
+    );
+        
+    x.start();    
+      
+        
+        
+        
+        
+        
+        
     }
 
     /**
@@ -32,6 +65,7 @@ public class Reloj extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setForeground(new java.awt.Color(0, 255, 255));
@@ -46,12 +80,13 @@ public class Reloj extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(51, 255, 51));
         jButton1.setText("DarLaHora");
-        jButton1.setActionCommand("DarLaHora");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        jLabel2.setText("HORA AUTOMATICA");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -65,11 +100,16 @@ public class Reloj extends javax.swing.JFrame {
                 .addGap(156, 156, 156)
                 .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(85, 85, 85)
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addGap(60, 60, 60)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(70, 70, 70)
                 .addComponent(jButton1)
@@ -94,8 +134,7 @@ public class Reloj extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     
-        
-        Thread x=new Thread(new Runnable(){
+              Thread x=new Thread(new Runnable(){
         
         public void run() {
             
@@ -108,7 +147,7 @@ public class Reloj extends javax.swing.JFrame {
     int minuto=cal.get(Calendar.MINUTE);
     int segundo=cal.get(Calendar.SECOND);
     
-     jLabel1.setText("La hora es: "+hora+": "+minuto+" :" + segundo);
+     jLabel1.setText(hora+": "+minuto+" :" + segundo);
        
      Thread.sleep(1000);
     }catch(InterruptedException e){}
@@ -118,7 +157,8 @@ public class Reloj extends javax.swing.JFrame {
     }  
     );
         
-    x.start();    
+    x.start();  
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -159,6 +199,7 @@ public class Reloj extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
